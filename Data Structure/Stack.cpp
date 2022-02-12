@@ -1,5 +1,4 @@
 #include <iostream>
-#include <climits>
 using namespace std;
 #define SIZE 500 // Stack capacity
 
@@ -16,6 +15,7 @@ using namespace std;
  *      |__1__|
  */
 
+//* This implementation uses static arrays
 // Declaration
 template <class T> class Stack {
     private:

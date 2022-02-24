@@ -5,27 +5,27 @@
 #include <bits/stdc++.h>
 using namespace std;
 
-void sieve(int n) {
-    vector<int> primes(n+1,1);
-    for (int i=2;i*i<=n;i++) {
-        if (primes[i]) {
-            for (int j=i*i;j<=n;j+=i) {
-                primes[j] = 0;
-            }
-        }
+vector<bool> check;
+template <typename T> vector<T> sieve(T n) {
+    check.resize(n+2,true);
+    check[0]=0; check[1]=0; check[2]=1;
+    
+    vector<T> prime;
+    for (T i=2;i*i<=check.size();i++) {
+        if (check[i])
+            for (T j=i*i;j<=check.size();j+=i)
+                check[j] = 0;
     }
 
-    for (int i=2;i<=n;i++) {
-        if (primes[i]) {
-            cout<<i<<" ";
-        }
-    }
-    cout<<endl;
+    for (T i=2;i<check.size();i++)
+        if (check[i])
+            prime.push_back(i);
+    
+    return prime;
 }
 
 int main() {
-    int n = 30;
-    sieve(n);
+    vector<long long> primes = sieve((long long)1e5);
 
     return 0;
 }

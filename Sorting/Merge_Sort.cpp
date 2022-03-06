@@ -1,7 +1,7 @@
 #include <bits/stdc++.h>
 using namespace std;
 
-//* Merge Sort keeps dividing the array in two sub-arrays until only 2 elements are left in the sub-array, then we sort these two arrays first and then merge them with the parent array.
+//* Merge Sort keeps dividing the array in two sub-arrays until only 1 elements are left in the sub-array, then we sort the two arrays first and then merge them with the parent array.
 //* Time Complexity : O(n.logn).
 //* Merge Sort is stable sorting algorithm.
 //* Merge Sort is not in-place sorting algorithm.
@@ -32,6 +32,7 @@ void Merge(int L[],int R[],int A[],int n) {
         k++;
     }
 }
+
 void MergeSort(int A[],int n) {
     if (n<2){
         return;

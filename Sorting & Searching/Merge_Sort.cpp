@@ -53,7 +53,7 @@ void MergeSort(int A[],int n) {
 
 int main() {
     int n = 8;
-    int A[n] = {2,4,1,6,8,5,3,7};
+    int A[8] = {2,4,1,6,8,5,3,7};
 
     for(int i=0;i<n;i++) {
         cout<<A[i]<<" ";

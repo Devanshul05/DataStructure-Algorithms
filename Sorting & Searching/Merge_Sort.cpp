@@ -34,7 +34,7 @@ void Merge(int L[],int R[],int A[],int n) {
 }
 
 void MergeSort(int A[],int n) {
-    if (n<2){
+    if (n<2) {
         return;
     }
     int mid = (n+1)/2;

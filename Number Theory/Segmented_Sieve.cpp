@@ -29,7 +29,7 @@ template <typename T> vector<T> segmentedSieve(T L, T R) {
     if (L==1) isPrime[0]=0;
 
     return isPrime;
-} 
+}
 
 int main() {
     vector<long long> primes = segmentedSieve(2LL, 9LL);
